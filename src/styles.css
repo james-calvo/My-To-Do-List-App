@@ -1,0 +1,175 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode { /* Apply dark mode to body */
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.dark-mode .container {
+    background: #333;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.dark-mode h2 {
+    color: #fff;
+}
+
+/* Input Field */
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+input.task-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    flex-grow: 1;
+}
+
+input.task-input::placeholder {
+    color: #aaa;
+}
+
+input.task-input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+.dark-mode input.task-input {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode input.task-input::placeholder {
+    color: #999;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button-group button {
+    width: auto;
+    flex-grow: 1;
+}
+
+/* Task List */
+ul.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+li.task-item:hover {
+    transform: scale(1.02);
+}
+
+.dark-mode li.task-item {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Remove Button */
+li.task-item button.delete-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+li.task-item button.delete-button:hover {
+    background: #c82333;
+}
+
+/* Task Completion */
+.task-item.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.dark-mode .task-item.completed {
+    color: #bbb;
+}
+
+/* Edit Input */
+input.edit-input {
+    width: 60%;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+}
